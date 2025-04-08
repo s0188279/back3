@@ -1,0 +1,15 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    birthdate DATE NOT NULL,
+    gender ENUM('male', 'female') NOT NULL,
+    bio TEXT NOT NULL,
+    agree TINYINT(1) NOT NULL
+);
+CREATE TABLE user_languages (
+    user_id INT NOT NULL,
+    language VARCHAR(50) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
