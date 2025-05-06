@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web23</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="submit.php" method="POST">
+        <label>ФИО: <input type="text" name="name" required maxlength="150"></label>
+
+        <label>Телефон: <input type="tel" name="phone" required pattern="\+7\d{10}"></label>
+
+        <label>Email: <input type="email" name="email" required></label>
+
+        <label>Дата рождения: <input type="date" name="birthdate" required></label>
+
+        <fieldset>
+            <legend>Пол:</legend>
+            <label><input type="radio" name="gender" value="male" required> Мужской</label>
+            <label><input type="radio" name="gender" value="female"> Женский</label>
+        </fieldset>
+        <label>Любимый язык программирования:</label>
+        <select name="languages[]" multiple required>
+            <option value="1">Pascal</option>
+            <option value="2">C</option>
+            <option value="3">C++</option>
+            <option value="4">JavaScript</option>
+            <option value="5">PHP</option>
+            <option value="6">Python</option>
+            <option value="7">Java</option>
+            <option value="8">Haskell</option>
+            <option value="9">Clojure</option>
+            <option value="10">Prolog</option>
+            <option value="11">Scala</option>
+            <option value="12">Go</option>
+        </select>
+        <label>Биография: <textarea name="bio" rows="4" required></textarea></label>
+
+        <label>
+            <input type="checkbox" name="agree" required> С контрактом ознакомлен(а)
+        </label>
+
+        <button type="submit">Сохранить</button>
+    </form>
+
+</body>
+</html>
